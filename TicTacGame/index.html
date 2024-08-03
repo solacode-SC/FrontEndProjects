@@ -19,17 +19,19 @@
     <div class="infBoard">
         <div class="playerInfo">
             <div class="playerName">
-                <p>Player 1: <span></span></p>
-                <p>Player 2: <span></span></p>
+                <p>Player 1: <span id="putPlayerName1"></span></p>
+                <p>Player 2: <span id="putPlayerName2"></span></p>
             </div>
             <div class="playerTurn">
-                <p>Player <span>1</span>'s Turn</p>
+                <p>Player's Turn</p>
+                <p>Player <span id="putPlayerTurn">1</span></p>
             </div>
         </div>
 
         <div class="roundInfo">
             <div class="round">
-                <p>Round <span>1</span> / 5</p>
+                <p>Round :</p>
+                <p><span id="roundVal"></span> / 5</p>
             </div>
             <div class="winner">
                 <p>Player 1 : <span>0</span>/5</p>
@@ -37,19 +39,41 @@
             </div>
         </div>
     </div>
-    <main>
         <div class="board">
-            <div class="cell" id="cell1">x</div>
-            <div class="cell" id="cell2">o</div>
-            <div class="cell" id="cell3">o</div>
-            <div class="cell" id="cell4">o</div>
-            <div class="cell" id="cell5">o</div>
-            <div class="cell" id="cell6">x</div>
-            <div class="cell" id="cell7">x</div>
-            <div class="cell" id="cell8">x</div>
-            <div class="cell" id="cell9">x</div>
+            <div class="cell " id="cell1"></div>
+            <div class="cell " id="cell2"></div>
+            <div class="cell " id="cell3"></div>
+            <div class="cell " id="cell4"></div>
+            <div class="cell " id="cell5"></div>
+            <div class="cell " id="cell6"></div>
+            <div class="cell " id="cell7"></div>
+            <div class="cell " id="cell8"></div>
+            <div class="cell " id="cell9"></div>
         </div>
-    </main>
+        <div class="insertInfo" id="insertInfoDiv">
+            <div class="welconeDiv">
+                <h1>Welcome to Tic Tac Game</h1>
+                <p>We are so happy to play our Game please insert below info</p>
+            </div>
+            <div class="inputInfo">
+                <div class="playerNameInfo">
+                <fieldset>
+                    <legend style="color: aliceblue;" >Player 1 Name:</legend>
+                    <input type="text" id="player1" name="player1">
+                </fieldset>
+                </div>
+                <div class="playerNameInfo">
+                <fieldset>
+                    <legend >Player 2 Name:</legend>
+                    <input type="text" id="player2" name="player2">
+                </fieldset>
+                </div>
+                <div class="startGame">
+                    <button type="button" onclick="startGame()">Start Game</button>
+                </div>
+            </div>
+        </div>
     </section>
+    <script src="script.js"></script>
 </body>
 </html>

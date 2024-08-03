@@ -16,6 +16,8 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease-in-out;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     align-items: center;
     justify-content: space-around;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -51,32 +53,31 @@ header {
 
 section {
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
     flex-wrap: wrap;
     gap: 20px;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid black; */
     margin-top: 40px;
 }
 
 .board {
-    width: 400px;
+    width: 600px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: #ccc;
     border: 1px solid #000;
     display: flex;
@@ -86,6 +87,10 @@ section {
     font-weight: bold;
     cursor: pointer;
     border-radius: 10px;
+    background-image: url(img/1.png);
+    background-size: cover;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cell:hover {
@@ -98,24 +103,123 @@ section {
 }
 
 .infBoard {
-    width: 400px;
+    width: 500px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    background-color: #fff;
+    /* border: 1px solid black; */
+    background-color: #ffffff;
+    border-radius: 12px;
+    font-size: 22px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
 }
 .roundInfo {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 .playerInfo {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.playerName {
+    width: 50%;
+    height: auto;
+    margin: 4px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;}
+
+.playerTurn {
+    width: 50%;
+    height: auto;
+    margin: 4px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
+}
+
+.round {
+    width: 50%;
+    height: auto;
+    margin: 4px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;}
+
+.winner {
+    width: 50%;
+    height: auto;
+    margin: 4px;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+}
+
+
+.insertInfo {
+    width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure this value is higher than other elements */
+    background-color: rgba(0, 0, 0, 0.9); /* Optional: for a semi-transparent background */
+    color: white; /* Optional: for text color */
+    padding: 20px; /* Optional: for spacing inside the div */
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: for a shadow effect */
+}
+
+.welconeDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+.playerNameInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerNameInfo input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.startGame {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.startGame button {
+    width: 76%;
+    background-color: rgb(255, 238, 1);
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+fieldset {
+    width: 80%;
+    margin: 10px;
 }
