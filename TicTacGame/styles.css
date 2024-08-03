@@ -1,0 +1,121 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.headerBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.resetButton {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+.playButton {
+    background-color: rgb(51, 206, 3);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+section {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid black;
+    margin-top: 40px;
+}
+
+.board {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    border: 1px solid black;
+
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.active {
+    background-color: #f00;
+    color: #fff;
+}
+
+.infBoard {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: #fff;
+}
+.roundInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+
+}
+.playerInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
