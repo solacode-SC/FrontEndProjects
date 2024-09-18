@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 50px auto;
+    width: 30%;
+    /* height: 300px; */
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.imgDiv {
+    width: 100%;
+    margin: 0px;
+    /* border: 1px solid red; */
+}
+
+.imgDiv img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cardName {
+    margin: 2px 8px 0px 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.tags {
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: 5px auto;
+    
+}
