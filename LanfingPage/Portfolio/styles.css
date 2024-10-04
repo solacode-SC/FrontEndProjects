@@ -1,0 +1,232 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Content container */
+.container {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* To account for the fixed header */
+    background-image: url('img/img1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    backdrop-filter: blur(5px);
+}
+
+.hero-content {
+    text-align: center;
+    color: #2c3e50;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #34495e;
+    border: 2px solid #ffffff;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blurred circles */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(52, 152, 219, 0.3); /* Light blue, adjust color as needed */
+    border-radius: 50%;
+    filter: blur(60px);
+    top: 20%;
+    left: 10%;
+    z-index: 0;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgba(231, 76, 60, 0.3); /* Light red, adjust color as needed */
+    border-radius: 50%;
+    filter: blur(80px);
+    bottom: 20%;
+    right: 10%;
+    z-index: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    padding: 20px 5%; /* 5% padding on left and right to match the 90% content width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #34495e;
+}
+
+.logo {
+    color: #ecf0f1;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation ul li {
+    margin-left: 30px;
+}
+
+.navigation ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.navigation ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.navigation ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+/* Responsive toggle button (hidden by default) */
+.toggle {
+    display: none;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .toggle {
+        display: block;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .toggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #ecf0f1;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 0 -8px 0 #ecf0f1, 0 8px 0 #ecf0f1;
+    }
+
+    .navigation {
+        position: absolute;
+        background-color: #2c3e50;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 20px;
+        display: none;
+    }
+
+    .navigation.active {
+        display: block;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+    }
+
+    .navigation ul li {
+        margin: 10px 0;
+    }
+}
